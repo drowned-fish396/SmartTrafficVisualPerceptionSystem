@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1280" viewBox="0 0 1800 1280">
+  <defs>
+    <style>
+      .bg { fill: #f6f8fb; }
+      .title { font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif; font-size: 38px; font-weight: 700; fill: #102033; }
+      .subtitle { font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif; font-size: 18px; fill: #5f7085; }
+      .root { fill: #102033; stroke: #102033; stroke-width: 2; }
+      .rootText { font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif; font-size: 30px; font-weight: 700; fill: #fff; }
+      .panel { fill: #fff; stroke: #d7e0ea; stroke-width: 1.6; }
+      .headText { font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif; font-size: 24px; font-weight: 700; fill: #fff; }
+      .moduleText { font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif; font-size: 18px; fill: #17263a; }
+      .groupText { font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif; font-size: 19px; font-weight: 700; fill: #17263a; }
+      .smallText { font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif; font-size: 15px; fill: #40546b; }
+      .note { font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif; font-size: 15px; fill: #62758a; }
+      .line { stroke: #8fa1b6; stroke-width: 2.2; fill: none; }
+      .edgeHead { fill: #2f80ed; }
+      .cloudHead { fill: #1b998b; }
+      .frontHead { fill: #f2994a; }
+      .edgeBox { fill: #eaf3ff; stroke: #8dbcf5; }
+      .cloudBox { fill: #e8f7f4; stroke: #85cfc5; }
+      .agentBox { fill: #f1edff; stroke: #b3a4ff; }
+      .frontBox { fill: #fff2e4; stroke: #f4bd7a; }
+      .dataBox { fill: #eef3f8; stroke: #b9c8d8; }
+      .groupBox { fill: #ffffff; stroke: #d7e0ea; stroke-width: 1.3; }
+      .item { rx: 12; ry: 12; stroke-width: 1.4; }
+    </style>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#132238" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1800" height="1280"/>
+
+  <text class="title" x="900" y="68" text-anchor="middle">系统总体功能模块图</text>
+  <text class="subtitle" x="900" y="102" text-anchor="middle">云边端协同的智慧交通视觉感知系统 V2.0</text>
+
+  <rect class="root" x="470" y="132" width="860" height="76" rx="24" ry="24" filter="url(#shadow)"/>
+  <text class="rootText" x="900" y="180" text-anchor="middle">云边端协同智慧交通视觉感知系统</text>
+
+  <path class="line" d="M900 208 L900 263"/>
+  <path class="line" d="M240 263 L1560 263"/>
+  <path class="line" d="M240 263 L240 302"/>
+  <path class="line" d="M900 263 L900 302"/>
+  <path class="line" d="M1560 263 L1560 302"/>
+
+  <!-- Edge subsystem -->
+  <g filter="url(#shadow)">
+    <rect class="panel" x="70" y="302" width="340" height="790" rx="22" ry="22"/>
+    <rect class="edgeHead" x="70" y="302" width="340" height="64" rx="22" ry="22"/>
+    <rect class="edgeHead" x="70" y="334" width="340" height="32"/>
+  </g>
+  <text class="headText" x="240" y="343" text-anchor="middle">边端采集子系统</text>
+  <text class="note" x="240" y="394" text-anchor="middle">负责现场视频输入与设备状态上报</text>
+
+  <rect class="item edgeBox" x="110" y="430" width="260" height="52"/>
+  <text class="moduleText" x="240" y="463" text-anchor="middle">视频采集</text>
+  <rect class="item edgeBox" x="110" y="505" width="260" height="52"/>
+  <text class="moduleText" x="240" y="538" text-anchor="middle">实时推流</text>
+  <rect class="item edgeBox" x="110" y="580" width="260" height="52"/>
+  <text class="moduleText" x="240" y="613" text-anchor="middle">视频上传兜底</text>
+  <rect class="item edgeBox" x="110" y="655" width="260" height="52"/>
+  <text class="moduleText" x="240" y="688" text-anchor="middle">设备注册</text>
+  <rect class="item edgeBox" x="110" y="730" width="260" height="52"/>
+  <text class="moduleText" x="240" y="763" text-anchor="middle">心跳上报</text>
+  <rect class="item edgeBox" x="110" y="805" width="260" height="52"/>
+  <text class="moduleText" x="240" y="838" text-anchor="middle">边端状态提示</text>
+
+  <!-- Cloud subsystem -->
+  <g filter="url(#shadow)">
+    <rect class="panel" x="460" y="302" width="880" height="790" rx="22" ry="22"/>
+    <rect class="cloudHead" x="460" y="302" width="880" height="64" rx="22" ry="22"/>
+    <rect class="cloudHead" x="460" y="334" width="880" height="32"/>
+  </g>
+  <text class="headText" x="900" y="343" text-anchor="middle">云端分析与智能服务子系统</text>
+  <text class="note" x="900" y="394" text-anchor="middle">负责视频接入、视觉分析、平台管理、数据持久化与云端智能分析编排</text>
+
+  <!-- Cloud group: video and task -->
+  <rect class="groupBox" x="500" y="426" width="390" height="180" rx="18" ry="18"/>
+  <text class="groupText" x="695" y="462" text-anchor="middle">视频接入与任务管理</text>
+  <rect class="item cloudBox" x="530" y="490" width="150" height="44"/>
+  <text class="moduleText" x="605" y="519" text-anchor="middle">视频接入管理</text>
+  <rect class="item cloudBox" x="710" y="490" width="150" height="44"/>
+  <text class="moduleText" x="785" y="519" text-anchor="middle">分析任务管理</text>
+  <text class="smallText" x="695" y="562" text-anchor="middle">统一管理实时流、上传视频、任务状态与结果汇总</text>
+
+  <!-- Cloud group: algorithm -->
+  <rect class="groupBox" x="910" y="426" width="390" height="180" rx="18" ry="18"/>
+  <text class="groupText" x="1105" y="462" text-anchor="middle">视觉感知算法</text>
+  <rect class="item cloudBox" x="940" y="490" width="100" height="42"/>
+  <text class="smallText" x="990" y="517" text-anchor="middle">车辆检测</text>
+  <rect class="item cloudBox" x="1060" y="490" width="100" height="42"/>
+  <text class="smallText" x="1110" y="517" text-anchor="middle">车牌识别</text>
+  <rect class="item cloudBox" x="1180" y="490" width="90" height="42"/>
+  <text class="smallText" x="1225" y="517" text-anchor="middle">拥堵分析</text>
+  <rect class="item cloudBox" x="970" y="545" width="100" height="42"/>
+  <text class="smallText" x="1020" y="572" text-anchor="middle">禁停跟踪</text>
+  <rect class="item cloudBox" x="1090" y="545" width="110" height="42"/>
+  <text class="smallText" x="1145" y="572" text-anchor="middle">道路异常</text>
+  <rect class="item cloudBox" x="1215" y="545" width="55" height="42"/>
+  <text class="smallText" x="1242" y="572" text-anchor="middle">兜底</text>
+
+  <!-- Cloud group: platform -->
+  <rect class="groupBox" x="500" y="634" width="390" height="230" rx="18" ry="18"/>
+  <text class="groupText" x="695" y="670" text-anchor="middle">平台管理与实时推送</text>
+  <rect class="item cloudBox" x="530" y="700" width="100" height="42"/>
+  <text class="smallText" x="580" y="727" text-anchor="middle">设备管理</text>
+  <rect class="item cloudBox" x="645" y="700" width="100" height="42"/>
+  <text class="smallText" x="695" y="727" text-anchor="middle">模型管理</text>
+  <rect class="item cloudBox" x="760" y="700" width="100" height="42"/>
+  <text class="smallText" x="810" y="727" text-anchor="middle">系统监控</text>
+  <rect class="item cloudBox" x="530" y="760" width="100" height="42"/>
+  <text class="smallText" x="580" y="787" text-anchor="middle">告警管理</text>
+  <rect class="item cloudBox" x="645" y="760" width="100" height="42"/>
+  <text class="smallText" x="695" y="787" text-anchor="middle">历史查询</text>
+  <rect class="item cloudBox" x="760" y="760" width="100" height="42"/>
+  <text class="smallText" x="810" y="787" text-anchor="middle">实时推送</text>
+  <rect class="item dataBox" x="560" y="815" width="270" height="38"/>
+  <text class="smallText" x="695" y="840" text-anchor="middle">数据支撑：业务数据、模型配置、历史记录</text>
+
+  <!-- Cloud group: intelligent module inside cloud -->
+  <rect class="groupBox" x="910" y="634" width="390" height="390" rx="18" ry="18"/>
+  <text class="groupText" x="1105" y="670" text-anchor="middle">云端智能分析与辅助决策</text>
+  <text class="note" x="1105" y="696" text-anchor="middle">云端内部模块，调用大模型能力但不作为第四端</text>
+  <rect class="item agentBox" x="940" y="725" width="150" height="42"/>
+  <text class="smallText" x="1015" y="752" text-anchor="middle">上下文构建</text>
+  <rect class="item agentBox" x="1115" y="725" width="155" height="42"/>
+  <text class="smallText" x="1192" y="752" text-anchor="middle">智能报告生成</text>
+  <rect class="item agentBox" x="940" y="785" width="150" height="42"/>
+  <text class="smallText" x="1015" y="812" text-anchor="middle">告警解释建议</text>
+  <rect class="item agentBox" x="1115" y="785" width="155" height="42"/>
+  <text class="smallText" x="1192" y="812" text-anchor="middle">自然语言查询</text>
+  <rect class="item agentBox" x="940" y="845" width="150" height="42"/>
+  <text class="smallText" x="1015" y="872" text-anchor="middle">工具调用编排</text>
+  <rect class="item agentBox" x="1115" y="845" width="155" height="42"/>
+  <text class="smallText" x="1192" y="872" text-anchor="middle">操作预览确认</text>
+  <rect class="item agentBox" x="940" y="905" width="150" height="42"/>
+  <text class="smallText" x="1015" y="932" text-anchor="middle">受控工具执行</text>
+  <rect class="item agentBox" x="1115" y="905" width="155" height="42"/>
+  <text class="smallText" x="1192" y="932" text-anchor="middle">智能助手日志</text>
+  <rect class="item dataBox" x="965" y="965" width="280" height="38"/>
+  <text class="smallText" x="1105" y="990" text-anchor="middle">智能报告、工具调用记录、操作日志</text>
+
+  <!-- Frontend subsystem -->
+  <g filter="url(#shadow)">
+    <rect class="panel" x="1390" y="302" width="340" height="790" rx="22" ry="22"/>
+    <rect class="frontHead" x="1390" y="302" width="340" height="64" rx="22" ry="22"/>
+    <rect class="frontHead" x="1390" y="334" width="340" height="32"/>
+  </g>
+  <text class="headText" x="1560" y="343" text-anchor="middle">前端展示与交互子系统</text>
+  <text class="note" x="1560" y="394" text-anchor="middle">负责实时展示、管理配置、历史查询与智能交互</text>
+
+  <rect class="item frontBox" x="1430" y="430" width="260" height="42"/>
+  <text class="moduleText" x="1560" y="458" text-anchor="middle">实时监控大屏</text>
+  <rect class="item frontBox" x="1430" y="485" width="260" height="42"/>
+  <text class="moduleText" x="1560" y="513" text-anchor="middle">闸机监控视图</text>
+  <rect class="item frontBox" x="1430" y="540" width="260" height="42"/>
+  <text class="moduleText" x="1560" y="568" text-anchor="middle">拥堵热力图视图</text>
+  <rect class="item frontBox" x="1430" y="595" width="260" height="42"/>
+  <text class="moduleText" x="1560" y="623" text-anchor="middle">禁停区域监控视图</text>
+  <rect class="item frontBox" x="1430" y="650" width="260" height="42"/>
+  <text class="moduleText" x="1560" y="678" text-anchor="middle">道路异常监控视图</text>
+  <rect class="item frontBox" x="1430" y="705" width="260" height="42"/>
+  <text class="moduleText" x="1560" y="733" text-anchor="middle">设备管理页面</text>
+  <rect class="item frontBox" x="1430" y="760" width="260" height="42"/>
+  <text class="moduleText" x="1560" y="788" text-anchor="middle">模型管理页面</text>
+  <rect class="item frontBox" x="1430" y="815" width="260" height="42"/>
+  <text class="moduleText" x="1560" y="843" text-anchor="middle">系统状态页面</text>
+  <rect class="item frontBox" x="1430" y="870" width="260" height="42"/>
+  <text class="moduleText" x="1560" y="898" text-anchor="middle">历史查询页面</text>
+  <rect class="item frontBox" x="1430" y="925" width="260" height="42"/>
+  <text class="moduleText" x="1560" y="953" text-anchor="middle">智能分析报告页面</text>
+  <rect class="item frontBox" x="1430" y="980" width="260" height="42"/>
+  <text class="moduleText" x="1560" y="1008" text-anchor="middle">智能助手交互面板</text>
+
+  <rect x="120" y="1152" width="1560" height="62" rx="16" ry="16" fill="#eef3f8" stroke="#d7e0ea"/>
+  <text class="note" x="900" y="1178" text-anchor="middle">说明：本图为树状功能分解图，用于系统设计报告 V2.0。一级结构保持边端、云端、前端三端架构。</text>
+  <text class="note" x="900" y="1203" text-anchor="middle">智能分析与辅助决策归属于云端分析与智能服务子系统，体现为云端智能分析层能力，而不是独立系统端。</text>
+</svg>
